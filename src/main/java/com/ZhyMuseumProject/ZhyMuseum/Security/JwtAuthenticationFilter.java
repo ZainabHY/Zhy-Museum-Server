@@ -2,7 +2,7 @@ package com.ZhyMuseumProject.ZhyMuseum.Security;
 
 
 import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.JWTService;
-import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserServices;
+import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,7 +27,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private final JWTService jwtService;
     @Autowired
-    private final UserServices usersService;
+    private final UserService usersService;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 

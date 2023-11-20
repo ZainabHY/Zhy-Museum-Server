@@ -2,7 +2,7 @@ package com.ZhyMuseumProject.ZhyMuseum.Controller;
 
 
 import com.ZhyMuseumProject.ZhyMuseum.Repository.UserRepository;
-import com.ZhyMuseumProject.ZhyMuseum.Service.Imp.UserImp;
+import com.ZhyMuseumProject.ZhyMuseum.Service.Imp.UserServiceImpl;
 import com.ZhyMuseumProject.ZhyMuseum.entity.User;
 import jakarta.validation.Valid;
 import lombok.NoArgsConstructor;
@@ -16,10 +16,11 @@ import java.util.Optional;
 
 @RestController
 @NoArgsConstructor
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
-    private UserImp userImp;
+    private UserServiceImpl userImp;
 
 
     @Autowired

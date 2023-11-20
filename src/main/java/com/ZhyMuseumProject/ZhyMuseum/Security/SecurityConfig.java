@@ -1,7 +1,7 @@
 package com.ZhyMuseumProject.ZhyMuseum.Security;
 
 
-import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserServices;
+import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +28,7 @@ public class SecurityConfig  {
     @Autowired
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     @Autowired
-    private final UserServices usersService;
+    private final UserService usersService;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{

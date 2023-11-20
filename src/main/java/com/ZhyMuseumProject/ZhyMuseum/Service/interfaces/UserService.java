@@ -11,7 +11,7 @@ import java.util.List;
 
  */
 
-public interface UserServices {
+public interface UserService {
 
     /*
 

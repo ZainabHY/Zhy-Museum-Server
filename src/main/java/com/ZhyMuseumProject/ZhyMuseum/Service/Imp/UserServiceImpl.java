@@ -2,7 +2,7 @@ package com.ZhyMuseumProject.ZhyMuseum.Service.Imp;
 
 
 import com.ZhyMuseumProject.ZhyMuseum.Repository.UserRepository;
-import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserServices;
+import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.UserService;
 import com.ZhyMuseumProject.ZhyMuseum.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserImp implements UserServices {
+public class UserServiceImpl implements UserService {
 
     // Autowired UserRepository for database operations
     @Autowired
