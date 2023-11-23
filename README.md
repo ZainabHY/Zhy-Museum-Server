@@ -1,5 +1,8 @@
 # Zhy Museum Server
 
+**Class Diagram**
+![alt text](https://github.com/ZainabHY/Volunteering-Management-System/blob/main/Volunteering%20Management%20System.png) 
+
 
 ### Model
 * Define entities that represent the core concepts in the system (User "Artist, Artlover", Role, Artwork)
