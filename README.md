@@ -1,7 +1,6 @@
 # Zhy Museum Server
 
 **Class Diagram**
-![alt text]([https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png]) 
 ![alt text](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png) 
 
 
