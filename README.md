@@ -1,7 +1,7 @@
 # Zhy Museum Server
 
 **Class Diagram**
-![alt text]([https://github.com/ZainabHY/Volunteering-Management-System/blob/main/Volunteering%20Management%20System.png](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png)) 
+![alt text]([https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png]) 
 
 
 ### Model
