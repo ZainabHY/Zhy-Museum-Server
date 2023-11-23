@@ -1,9 +1,11 @@
 # Zhy Museum Server
 
+## Diagrams
 **Class Diagram**
-![alt text](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png) 
+![Class Diagram*](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png) 
 
-![alt text](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum%20-%20Use%20Case.png) 
+**Use Case Diagram**
+![Use Case Diagram](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum%20-%20Use%20Case.png) 
 
 
 ### Model
