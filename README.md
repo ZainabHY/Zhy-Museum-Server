@@ -3,6 +3,8 @@
 **Class Diagram**
 ![alt text](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png) 
 
+![alt text](https://github.com/ZainabHY/blob/main/Museum%20-%20Use%20Case.png) 
+
 
 ### Model
 * Define entities that represent the core concepts in the system (User, Artwork)
