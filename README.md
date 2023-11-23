@@ -5,7 +5,7 @@
 
 
 ### Model
-* Define entities that represent the core concepts in the system (User "Artist, Artlover", Role, Artwork)
+* Define entities that represent the core concepts in the system (User, Artwork)
 
 ### Repository
 * Create repositories to interact with the database
