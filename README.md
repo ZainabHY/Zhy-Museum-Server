@@ -1,5 +1,10 @@
 # Zhy Museum Server
 
+## Description
+Zhy Museum is a web application designed for viewing artworks with several types - Charcoal and Pencil. 
+Implemented using **SpringBoot** for backend, and **Angular** for frontend, using Monolithic approach.
+
+
 ## Diagrams
 **Class Diagram**
 ![Class Diagram*](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum-%20class%20UML.png) 
@@ -8,6 +13,7 @@
 ![Use Case Diagram](https://github.com/ZainabHY/Zhy-Museum-Server/blob/main/Museum%20-%20Use%20Case.png) 
 
 
+## Project Structure
 ### Model
 * Define entities that represent the core concepts in the system (User, Artwork)
 
