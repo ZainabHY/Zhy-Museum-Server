@@ -147,9 +147,9 @@ public class UserController {
     }
 
     // Getting list of artworks whether by Charcoal or by Pencil
-    @GetMapping("/both/getArtworksByType")
+    @GetMapping("/both/getArtworksByType/{artworkType}")
     @PreAuthorize("hasAnyAuthority('ROLE_ARTIST', 'ROLE_ARTLOVER')")
-    public List<Artwork> getArtworksByType(@RequestParam ArtworkType artworkType) {
+    public List<Artwork> getArtworksByType(@PathVariable ArtworkType artworkType) {
         return artworkService.getArtworksByType(artworkType);
     }
 
