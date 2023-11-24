@@ -1,7 +1,7 @@
 package com.ZhyMuseumProject.ZhyMuseum.Service.Imp;
 
 import com.ZhyMuseumProject.ZhyMuseum.DTO.JwtAuthenticationRequest;
-import com.ZhyMuseumProject.ZhyMuseum.DTO.SignInRequest;
+import com.ZhyMuseumProject.ZhyMuseum.DTO.LoginRequest;
 import com.ZhyMuseumProject.ZhyMuseum.DTO.SignUpRequest;
 import com.ZhyMuseumProject.ZhyMuseum.Repository.UserRepository;
 import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.AuthenticationService;
@@ -43,7 +43,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public JwtAuthenticationRequest signIn(SignInRequest signInRequest) {
+    public JwtAuthenticationRequest login(LoginRequest signInRequest) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 signInRequest.getUsername(), signInRequest.getPassword()));
         var users = usersRepository.findByUsername(signInRequest.getUsername());

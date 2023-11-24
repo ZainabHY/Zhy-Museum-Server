@@ -2,7 +2,7 @@ package com.ZhyMuseumProject.ZhyMuseum.Controller;
 
 
 import com.ZhyMuseumProject.ZhyMuseum.DTO.JwtAuthenticationRequest;
-import com.ZhyMuseumProject.ZhyMuseum.DTO.SignInRequest;
+import com.ZhyMuseumProject.ZhyMuseum.DTO.LoginRequest;
 import com.ZhyMuseumProject.ZhyMuseum.DTO.SignUpRequest;
 import com.ZhyMuseumProject.ZhyMuseum.DTO.UserVerify;
 import com.ZhyMuseumProject.ZhyMuseum.Repository.UserRepository;
@@ -40,9 +40,9 @@ public class AuthController {
         }
     }
 
-    @PostMapping(value = "/signin")
-    public ResponseEntity<JwtAuthenticationRequest> signin(@RequestBody SignInRequest signInRequest){
-        return ResponseEntity.ok(authenticationService.signIn(signInRequest));
+    @PostMapping(value = "/login")
+    public ResponseEntity<JwtAuthenticationRequest> login(@RequestBody LoginRequest signInRequest){
+        return ResponseEntity.ok(authenticationService.login(signInRequest));
     }
 
     @GetMapping("/verify")

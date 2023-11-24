@@ -1,8 +1,10 @@
 package com.ZhyMuseumProject.ZhyMuseum.Service.interfaces;
 
 import com.ZhyMuseumProject.ZhyMuseum.entity.Artwork;
+import com.ZhyMuseumProject.ZhyMuseum.entity.ArtworkType;
 
 import java.util.List;
+import java.util.Optional;
 
 /*
 
@@ -14,10 +16,13 @@ public interface ArtworkService {
 
     /*
 
-     List of methods to show all Artworks, add , delete and update.
+     List of methods to show all Artworks, add , delete and update
 
     */
     public List<Artwork> getAllArtworks();
+    public Optional<Artwork> getArtworkById(String artworkId);
+    public List<Artwork> getArtworksByType(ArtworkType artworkType);
+
 
     public Artwork addArtwork(Artwork book);
 

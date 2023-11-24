@@ -3,10 +3,12 @@ package com.ZhyMuseumProject.ZhyMuseum.Service.Imp;
 import com.ZhyMuseumProject.ZhyMuseum.Repository.ArtworkRepository;
 import com.ZhyMuseumProject.ZhyMuseum.Service.interfaces.ArtworkService;
 import com.ZhyMuseumProject.ZhyMuseum.entity.Artwork;
+import com.ZhyMuseumProject.ZhyMuseum.entity.ArtworkType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ArtworkServiceImpl implements ArtworkService {
@@ -19,6 +21,15 @@ public class ArtworkServiceImpl implements ArtworkService {
         return artworkRepository.findAll();
     }
 
+    @Override
+    public Optional<Artwork> getArtworkById(String artworkId) {
+        return artworkRepository.findByArtworkId(artworkId);
+    }
+
+    @Override
+    public List<Artwork> getArtworksByType(ArtworkType artworkType) {
+        return artworkRepository.findByArtworkType(artworkType);
+    }
     @Override
     public Artwork addArtwork(Artwork artwork) {
         return artworkRepository.save(artwork);

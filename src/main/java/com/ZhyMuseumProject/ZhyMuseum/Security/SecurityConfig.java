@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Role;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -32,15 +33,25 @@ public class SecurityConfig  {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+//        JwtAuthenticationFilter filter = new JwtAuthenticationFilter(authenticationManager());
+
         http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests(
                         request-> request.requestMatchers("/zhyMuseum/auth/**")
                                 .permitAll()
-                                .requestMatchers("/zhyMuseum/artist/**").permitAll()
-                                .requestMatchers("/zhyMuseum/**").permitAll()
+                                .requestMatchers("/zhyMuseum/auth/login").permitAll()
+                                .requestMatchers("/zhyMuseum/auth/signup").permitAll()
+
+                                .requestMatchers("/zhyMuseum/auth/api/artist/**").hasAuthority("ROLE_ARTIST")
+                                .requestMatchers("/zhyMuseum/auth/api/both/**").hasAuthority("ROLE_ARTIST")
+                                .requestMatchers("/zhyMuseum/auth/api/both/**").hasAuthority("ROLE_ARTLOVER")
+
+//                                .requestMatchers("/zhyMuseum/artist/**").permitAll()
+//                                .requestMatchers("/zhyMuseum/**").permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement(manager-> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
     }
     @Bean
@@ -54,6 +65,11 @@ public class SecurityConfig  {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+//    @Bean
+//    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception{
+//        return config.getAuthenticationManager();
+//    }
+
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception{
         return config.getAuthenticationManager();

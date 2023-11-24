@@ -21,6 +21,8 @@ public class ZhyMuseumApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(ZhyMuseumApplication.class, args);
 	}
+
+	// Handling CORS
 	@Bean
 	public WebMvcConfigurer corsConfigurer(){
 		return new WebMvcConfigurer() {
@@ -42,7 +44,6 @@ public class ZhyMuseumApplication implements CommandLineRunner {
 			users.setRole(Role.ARTIST);
 			usersRepository.save(users);
 		}
-
 	}
 
 
